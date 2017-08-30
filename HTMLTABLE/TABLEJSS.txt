@@ -1,0 +1,27 @@
+function average() {
+      var tb = document.getElementById('table').rows;
+      var ar = null;
+	  var count =0;
+      for (var i = 1; i < tb.length; ++i) {
+        var num = 0;
+        ar = tb[i].cells;
+        for (var j = 2; j < ar.length; ++j) {
+			if(ar[j].innerHTML == "-"){
+				ar[j].style.backgroundColor = "yellow";
+				count++;}
+            if(ar[j].innerHTML > 0 && j < ar.length-1){
+                num+=parseInt(ar[j].innerHTML);
+			    ar[j].style.backgroundColor = "white";}
+            if(j == ar.length-1) {
+                ar[j].innerHTML = Math.round(num/5)+"%";
+                if(Math.round(num/5) > 40) {
+					ar[j].style.backgroundColor = "white";
+                    ar[j].style.color = "black";} 
+					else{
+					ar[j].style.backgroundColor = "red";
+                    ar[j].style.color = "white";}
+            }
+        }
+      }  
+	  document.getElementById("count").innerHTML = "Unsubmitted: " +count;  
+    }
