@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title>Assignment 1</title>
+  <link rel="stylesheet" href="/CSS/theme.css">
+  <script src="JS/average.js"></script>
+</head>
+<style>
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-gh1y{font-weight:bold;font-family:"Times New Roman", Times, serif !important;;text-align:center;vertical-align:top}
+.tg .tg-lqy6{text-align:right;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+
+div {
+    width: 500px;
+    padding: 0px;
+    border: 15px solid grey;
+    margin: 0;
+	
+}
+button {
+    background-color: red;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+</style>
+
+
+<center><table class="tg" id="table" style="table">
+<colgroup>
+<col style="width: 82px">
+<col style="width: 82px">
+<col style="width: 82px">
+<col style="width: 82px">
+<col style="width: 82px">
+<col style="width: 82px">
+<col style="width: 82px">
+<col style="width: 82px">
+</colgroup>
+  <tr>
+    <th class="tg-gh1y">Student ID<br></th>
+    <th class="tg-gh1y">Student Name</th>
+    <th class="tg-gh1y">Assignment 1<br></th>
+    <th class="tg-gh1y">Assignment 2</th>
+    <th class="tg-gh1y">Assignment 3<br></th>
+    <th class="tg-gh1y">Assignment 4<br></th>
+    <th class="tg-gh1y">Assignment 5</th>
+    <th class="tg-gh1y">Average Grade</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">15534083</td>
+    <td class="tg-yw4l">Glenn Purtill</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6"></td>
+  </tr>
+<tr>
+    <td class="tg-yw4l">15534083</td>
+    <td class="tg-yw4l">Glenn Purtill</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6"></td>
+  </tr>
+<tr>
+    <td class="tg-yw4l">15534083</td>
+    <td class="tg-yw4l">Glenn Purtill</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6"></td>
+  </tr>
+<tr>
+    <td class="tg-yw4l">15534083</td>
+    <td class="tg-yw4l">Glenn Purtill</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6"></td>
+  </tr><tr>
+    <td class="tg-yw4l">15534083</td>
+    <td class="tg-yw4l">Glenn Purtill</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6"></td>
+  </tr><tr>
+    <td class="tg-yw4l">15534083</td>
+    <td class="tg-yw4l">Glenn Purtill</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6"></td>
+  </tr><tr>
+    <td class="tg-yw4l">15534083</td>
+    <td class="tg-yw4l">Glenn Purtill</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6"></td>
+  </tr><tr>
+    <td class="tg-yw4l">15534083</td>
+    <td class="tg-yw4l">Glenn Purtill</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6"></td>
+  </tr><tr>
+    <td class="tg-yw4l">15534083</td>
+    <td class="tg-yw4l">Glenn Purtill</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()">-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()" >-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()" >-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()" >-</td>
+    <td class="tg-lqy6" contenteditable='true' onKeyUp="average()" >-</td>
+    <td class="tg-lqy6"></td>
+  </tr>
+</table></center><br />
+<center><div id="count"></div></center><br/>
+<center><button type="button" onClick="average()">Calculate Average</button></center>
+
+<body>
+</body>
+</html>
