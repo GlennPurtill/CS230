@@ -1,0 +1,789 @@
+<html>
+<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<style type="text/css">
+.tt  {border-collapse:collapse;border-spacing:0;}
+.tt td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tt th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tt .tg-6idm{font-weight:bold;background-color:#efefef;color:#fe0000}
+.tt .tg-yw4l{vertical-align:top}
+
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-hk0i{font-weight:bold;text-decoration:underline;background-color:#cbcefb;text-align:center;vertical-align:top}
+.tg .tg-q5im{font-size:26px;vertical-align:top}
+.tg .tg-c72a{font-weight:bold;text-decoration:underline;font-size:15px;background-color:#ecf4ff;text-align:center;vertical-align:top}
+.tg .tg-eyil{font-weight:bold;text-decoration:underline;background-color:#ecf4ff;text-align:center;vertical-align:top}
+
+div {
+    width: 625px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+-webkit-box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+}
+.div1 {
+    width: 640px;
+    padding: 10px;
+    border: 10px solid navy;
+    margin: 0;
+-webkit-box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+}
+.div2 {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid navy;
+    margin: 0;
+-webkit-box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+}
+.div3 {
+    width: 330px;
+    padding: 10px;
+    border: 2px solid navy;
+    margin: 0;
+-webkit-box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+box-shadow: 10px 20px 31px 3px rgba(0,0,0,0.75);
+}
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.btnn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 8px 16px 8px 16px;
+  text-decoration: none;
+}
+
+.btnn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+b { 
+    font-weight: bold;
+	font-size: 18px
+}
+
+
+</style>
+<script >
+
+function changeImage(x,img){
+   document.getElementById(x).src=img;
+//alert("h");
+}
+var total =0;
+var total1=0;
+
+
+var ar = [];
+	for(var i =0; i<20; i++){
+	ar.push(false);
+	}
+
+function reset(){
+for(var i =0; i<20; i++){
+	ar[i]=false;
+	}
+total=0;
+total1=0;
+}
+	
+$(document).ready(function(){
+$('#one').click(function(){
+ $('#two').toggle();});
+});
+$(document).ready(function(){
+$('#createAccount').click(function(){
+ $('#createaccount1').toggle();});
+});
+
+$(document).ready(function(){
+$('#showresults').click(function(){
+ $('#showresults1').toggle();});
+ var r = "y";
+		$.ajax({
+		type:'POST',
+		url:'sandbox/db.php',
+		data:'request='+r,
+		success:function(msg){
+
+						$('#showerror').html(msg);
+					
+				}
+		});
+ 
+});
+
+function readText(y){
+    var x = document.getElementById(y).value;
+
+	if(y=='q1'&&x=='c'||x=='C'){
+		addOne(1);
+	}
+	if(y=='q2'&&x=='b'||x=='B'){
+		addOne(2);
+	}
+	if(y=='q3'&&x=='a'||x=='A'){
+		addOne(3);
+	}
+	if(y=='q4'&&x=='a'||x=='A'){
+		addOne(4);
+	}
+	if(y=='q5'&&x=='a'||x=='A'){
+		addOne(5);
+	}
+	if(y=='q6'&&x=='c'||x=='C'){
+		addOne(6);
+	}
+	if(y=='q7'&&x=='d'||x=='D'){
+		addOne(7);
+	}
+	if(y=='q8'&&x=='c'||x=='C'){
+		addOne(8);
+	}
+	if(y=='q9'&&x=='d'||x=='D'){
+		addOne(9);
+	}
+	if(y=='q10'&&x=='a'||x=='A'){
+		addOne(10);
+	}
+	if(y=='q11'&&x=='c'||x=='C'){
+		addTwo(11);
+	}
+	if(y=='q12'&&x=='d'||x=='D'){
+		addTwo(12);
+	}
+	if(y=='q13'&&x=='d'||x=='D'){
+		addTwo(13);
+	}
+	if(y=='q14'&&x=='d'||x=='D'){
+		addTwo(14);
+	}
+	if(y=='q15'&&x=='b'||x=='B'){
+		addTwo(15);
+	}
+	if(y=='q16'&&x=='a'||x=='A'){
+		addTwo(16);
+	}
+	if(y=='q17'&&x=='a'||x=='A'){
+		addTwo(17);
+	}
+	if(y=='q18'&&x=='c'||x=='C'){
+		addTwo(18);
+	}
+	if(y=='q19'&&x=='b'||x=='B'){
+		addTwo(19);
+	}
+	if(y=='q20'&&x=='b'||x=='B'){
+		addTwo(20);
+	}
+}
+
+function addOne(x){
+
+	if(ar[x-1]==false){
+	total++;
+	ar[x-1]= true;}
+}
+function addTwo(r){
+	if(ar[r-1]== false){
+	total1++;
+	ar[r-1]=true;
+	}
+}
+
+
+
+$(document).ready(function(){
+	var cusername = "";
+	var cpassword = "";
+	var susername = "";
+	var spassword = "";
+	var result = "";
+	var result1 = "";
+	
+	$('#results').click(function(){
+        $('#result').text("     " + (total/10)*100 + "%");
+    });
+	$('#results1').click(function(){
+        $('#result1').text("     " + (total1/10)*100 + "%");
+    });
+	
+	$('#createUsername').keyup(function(){
+		var vall = $(this).val();
+		cusername=vall;
+	});
+	$('#createPassword').keyup(function(){
+		var vall = $(this).val();
+		cpassword=vall;
+	});
+	$('#inUsername').keyup(function(){
+		var vall = $(this).val();
+		susername=vall;
+	});
+	$('#inPassword').keyup(function(){
+		var vall = $(this).val();
+		spassword=vall;
+	});
+
+
+	$('#createAccount2').click(function(){
+		if(cusername==""||cpassword==""){
+			$('#createerror').html("Ensure you have filled in both username and password");}
+		else{
+			result = "|"+(total/10)*100 + result;
+			result1 = "|"+(total1/10)*100 + result1;
+			$.ajax({
+			
+				type:'POST',
+				url:'sandbox/db.php',
+				data:'cusername='+cusername+"&cpassword="+cpassword+"&results="+result+"&results1="+result1,
+				success:function(msg){
+					if(msg=="done"){
+						$('#createerror').html("You are signed up!");
+					}
+					else{
+						$('#createerror').html(msg);
+					}
+				}
+			
+			});
+		}
+	});
+	
+	$('#signin').click(function(){
+		if(susername==""||spassword==""){
+			$('#signinerror').html("Ensure you have filled in both username and password");}
+		else{
+			result = "|"+(total/10)*100 + result;
+			result1 = "|"+(total1/10)*100 + result1;
+			
+			$.ajax({
+				type:'POST',
+				url:'sandbox/db.php',
+				data:'susername='+susername+'&spassword='+spassword+"&results="+result+"&results1="+result1,
+				success:function(msg){
+
+						$('#signinerror').html(msg);
+					
+				}
+			
+			});
+		}
+	});
+});
+
+
+
+
+
+
+
+
+var a = new Audio();
+a.src = "a.mp3";
+var i = new Audio();
+i.src = "e.mp3";
+var e = new Audio();
+e.src = "i.mp3";
+var o = new Audio();
+o.src = "o.mp3";
+var u = new Audio();
+u.src = "u.mp3";
+var ka = new Audio();
+ka.src = "ka.mp3";
+var ki = new Audio();
+ki.src = "ki.mp3";
+var ku = new Audio();
+ku.src = "ku.mp3";
+var ke = new Audio();
+ke.src = "ke.mp3";
+var ko = new Audio();
+ko.src = "ko.mp3";
+var sa = new Audio();
+sa.src = "sa.mp3";
+var si = new Audio();
+si.src = "si.mp3";
+var su = new Audio();
+su.src = "su.mp3";
+var se = new Audio();
+se.src = "se.mp3";
+var so = new Audio();
+so.src = "so.mp3";
+var ta = new Audio();
+ta.src = "ta.mp3";
+var ti = new Audio();
+ti.src = "ti.mp3";
+var te = new Audio();
+te.src = "te.mp3";
+var to = new Audio();
+to.src = "to.mp3";
+var tu = new Audio();
+tu.src = "tu.mp3";
+var na = new Audio();
+na.src = "na.mp3";
+var ni = new Audio();
+ni.src = "ni.mp3";
+var ne = new Audio();
+ne.src = "ne.mp3";
+var no = new Audio();
+no.src = "no.mp3";
+var nu = new Audio();
+nu.src = "nu.mp3";
+var ha = new Audio();
+ha.src = "ha.mp3";
+var hi = new Audio();
+hi.src = "hi.mp3";
+var hu = new Audio();
+hu.src = "hu.mp3";
+var he = new Audio();
+he.src = "he.mp3";
+var ho = new Audio();
+ho.src = "ho.mp3";
+var ma = new Audio();
+ma.src = "ma.mp3";
+var mi = new Audio();
+mi.src = "mi.mp3";
+var mu = new Audio();
+mu.src = "mu.mp3";
+var me = new Audio();
+me.src = "me.mp3";
+var mo = new Audio();
+mo.src = "mo.mp3";
+var ya = new Audio();
+ya.src = "ya.mp3";
+var yu = new Audio();
+yu.src = "yu.mp3";
+var yo= new Audio();
+yo.src = "yo.mp3";
+var ra = new Audio();
+ra.src = "ra.mp3";
+var ri = new Audio();
+ri.src = "ri.mp3";
+var ru = new Audio();
+ru.src = "ru.mp3";
+var re = new Audio();
+re.src = "re.mp3";
+var ro = new Audio();
+ro.src = "ro.mp3";
+var wa = new Audio();
+wa.src = "wa.mp3";
+var wo = new Audio();
+wo.src = "wo.mp3";
+var n = new Audio();
+n.src = "n.mp3";
+</script>
+
+</head>
+<center><div>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 640px">
+<colgroup>
+<col style="width: 100px">
+<col style="width: 10px">
+<col style="width: 100px">
+<col style="width: 10px">
+<col style="width: 100px">
+<col style="width: 10px">
+<col style="width: 100px">
+<col style="width: 10px">
+</colgroup>
+  <tr>
+    <th class="tg-c72a">Hiragana</th>
+    <th class="tg-hk0i"><br></th>
+    <th class="tg-eyil">Hiragana</th>
+    <th class="tg-hk0i"></th>
+    <th class="tg-eyil">Hiragana</th>
+    <th class="tg-hk0i"></th>
+    <th class="tg-eyil">Hiragana</th>
+
+  </tr>
+  <tr>
+	<td class="tg-q5im" onmousedown="a.play()"><img src = "A1.jpg" id = "A" width="100px" onmouseover="changeImage('A' ,'a.gif')" onmouseout="changeImage('A','A1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="si.play()"><img src = "SI1.jpg" id = "SI" width="100px" onmouseover="changeImage('SI' ,'si.gif')" onmouseout="changeImage('SI','SI1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="nu.play()"><img src = "NU1.jpg" id = "NU" width="100px" onmouseover="changeImage('NU' ,'nu.gif')" onmouseout="changeImage('NU','NU1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="me.play()"><img src = "ME1.jpg" id = "ME" width="100px" onmouseover="changeImage('ME' ,'me.gif')" onmouseout="changeImage('ME','ME1.jpg')"></img></td>
+    
+  </tr>
+  <tr>
+    <td class="tg-q5im" onmousedown="i.play()"><img src = "I1.jpeg" id = "I" width="100px" onmouseover="changeImage('I' ,'i.gif')" onmouseout="changeImage('I','I1.jpeg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="su.play()"><img src = "SU1.jpg" id = "SU" width="100px" onmouseover="changeImage('SU' ,'su.gif')" onmouseout="changeImage('SU','SU1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="ne.play()"><img src = "NE1.jpg" id = "NE" width="100px" onmouseover="changeImage('NE' ,'ne.gif')" onmouseout="changeImage('NE','NE1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="mo.play()"><img src = "MO1.jpg" id = "MO" width="100px" onmouseover="changeImage('MO' ,'mo.gif')" onmouseout="changeImage('MO','MO1.jpg')"></img></td>
+
+  </tr>
+  <tr>
+    <td class="tg-q5im" onmousedown="u.play()"><img src = "U1.jpg" id = "U" width="100px" onmouseover="changeImage('U' ,'u.gif')" onmouseout="changeImage('U','U1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="se.play()"><img src = "SE1.jpg" id = "SE" width="100px" onmouseover="changeImage('SE' ,'se.gif')" onmouseout="changeImage('SE','SE1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="no.play()"><img src = "NO1.jpg" id = "NO" width="100px" onmouseover="changeImage('NO' ,'no.gif')" onmouseout="changeImage('NO','NO1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="ya.play()"><img src = "YA1.jpg" id = "YA" width="100px" onmouseover="changeImage('YA' ,'ya.gif')" onmouseout="changeImage('YA','YA1.jpg')"></img></td>
+   
+  </tr>
+  <tr>
+    <td class="tg-q5im" onmousedown="e.play()"><img src = "E1.jpg" id = "E" width="100px" onmouseover="changeImage('E' ,'e.gif')" onmouseout="changeImage('E','E1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="so.play()"><img src = "SO1.jpg" id = "SO" width="100px" onmouseover="changeImage('SO' ,'so.gif')" onmouseout="changeImage('SO','SO1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="ha.play()"><img src = "HA1.jpg" id = "HA" width="100px" onmouseover="changeImage('HA' ,'ha.gif')" onmouseout="changeImage('HA','HA1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="yu.play()"><img src = "YU1.jpg" id = "YU" width="100px" onmouseover="changeImage('YU' ,'yu.gif')" onmouseout="changeImage('YU','YU1.jpg')"></img></td>
+
+  </tr>
+  <tr>
+    <td class="tg-q5im" onmousedown="o.play()"><img src = "O1.jpg" id = "O" width="100px" onmouseover="changeImage('O' ,'o.gif')" onmouseout="changeImage('O','O1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="ta.play()"><img src = "TA1.jpg" id = "TA" width="100px" onmouseover="changeImage('TA' ,'ta.gif')" onmouseout="changeImage('TA','TA1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="hi.play()"><img src = "HI1.jpg" id = "HI" width="100px" onmouseover="changeImage('HI' ,'hi.gif')" onmouseout="changeImage('HI','HI1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="yo.play()"><img src = "YO1.jpg" id = "YO" width="100px" onmouseover="changeImage('YO' ,'yo.gif')" onmouseout="changeImage('YO','YO1.jpg')"></img></td>
+
+  </tr>
+  <tr>
+    <td class="tg-q5im" onmousedown="ka.play()"><img src = "KA1.jpg" id = "KA" width="100px" onmouseover="changeImage('KA' ,'ka.gif')" onmouseout="changeImage('KA','KA1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="ti.play()"><img src = "TI1.jpg" id = "TI" width="100px" onmouseover="changeImage('TI' ,'ti.gif')" onmouseout="changeImage('TI','TI1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="hu.play()"><img src = "HU1.jpg" id = "HU" width="100px" onmouseover="changeImage('HU' ,'hu.gif')" onmouseout="changeImage('HU','HU1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="ra.play()"><img src = "RA1.jpg" id = "RA" width="100px" onmouseover="changeImage('RA' ,'ra.gif')" onmouseout="changeImage('RA','RA1.jpg')"></img></td>
+  </tr>
+  <tr>
+    <td class="tg-q5im" onmousedown="ki.play()"><img src = "KI1.jpg" id = "KI" width="100px" onmouseover="changeImage('KI' ,'ki.gif')" onmouseout="changeImage('KI','KI1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="tu.play()"><img src = "TU1.jpg" id = "TU" width="100px" onmouseover="changeImage('TU' ,'tu.gif')" onmouseout="changeImage('TU','TU1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="he.play()"><img src = "HE1.jpg" id = "HE" width="100px" onmouseover="changeImage('HE' ,'he.gif')" onmouseout="changeImage('HE','HE1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="ri.play()"><img src = "RI1.jpg" id = "RI" width="100px" onmouseover="changeImage('RI' ,'ri.gif')" onmouseout="changeImage('RI','RI1.jpg')"></img></td>
+
+  </tr>
+  <tr>
+    <td class="tg-q5im" onmousedown="ku.play()"><img src = "KU1.jpg" id = "KU" width="100px" onmouseover="changeImage('KU' ,'ku.gif')" onmouseout="changeImage('KU','KU1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="te.play()"><img src = "TE1.jpg" id = "TE" width="100px" onmouseover="changeImage('TE' ,'te.gif')" onmouseout="changeImage('TE','TE1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="ho.play()"><img src = "HO1.jpg" id = "HO" width="100px" onmouseover="changeImage('HO','ho.gif')" onmouseout="changeImage('HO','HO1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="ru.play()"><img src = "RU1.jpg" id = "RU" width="100px" onmouseover="changeImage('RU' ,'ru.gif')" onmouseout="changeImage('RU','RU1.jpg')"></img></td>
+
+  </tr>
+  <tr>
+    <td class="tg-q5im" onmousedown="ke.play()"><img src = "KE1.jpg" id = "KE" width="100px" onmouseover="changeImage('KE' ,'ke.gif')" onmouseout="changeImage('KE','KE1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="to.play()"><img src = "TO1.jpg" id = "TO" width="100px" onmouseover="changeImage('TO' ,'to.gif')" onmouseout="changeImage('TO','TO1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im"onmousedown="ma.play()" ><img src = "MA1.jpg" id = "MA" width="100px" onmouseover="changeImage('MA' ,'ma.gif')" onmouseout="changeImage('MA','MA1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="ro.play()"> <img src = "RO1.jpg" id = "RO" width="100px" onmouseover="changeImage('RO' ,'ro.gif')" onmouseout="changeImage('RO','RO1.jpg')"></img></td>
+   
+  </tr>
+  <tr>
+    <td class="tg-q5im" onmousedown="ko.play()"><img src = "KO1.jpg" id = "KO" width="100px" onmouseover="changeImage('KO' ,'ko.gif')" onmouseout="changeImage('KO','KO1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="na.play()"><img src = "NA1.jpg" id = "NA" width="100px" onmouseover="changeImage('NA' ,'na.gif')" onmouseout="changeImage('NA','NA1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="mi.play()"><img src = "MI1.jpg" id = "MI" width="100px" onmouseover="changeImage('MI' ,'mi.gif')" onmouseout="changeImage('MI','MI1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="re.play()"><img src = "RE1.jpg" id = "RE" width="100px" onmouseover="changeImage('RE' ,'re.gif')" onmouseout="changeImage('RE','RE1.jpg')"></img></td>
+
+  </tr>
+  <tr>
+    <td class="tg-q5im" onmousedown="sa.play()"><img src = "SA1.jpg" id = "SA" width="100px" onmouseover="changeImage('SA' ,'sa.gif')" onmouseout="changeImage('SA','SA1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="ni.play()"><img src = "NI1.jpg" id = "NI" width="100px" onmouseover="changeImage('NI' ,'ni.gif')" onmouseout="changeImage('NI','NI1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="mu.play()"><img src = "MU1.jpg" id = "MU" width="100px" onmouseover="changeImage('MU' ,'mu.gif')" onmouseout="changeImage('MU','MU1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="wo.play()"><img src = "WO1.jpg" id = "WO" width="100px" onmouseover="changeImage('WO' ,'wo.gif')" onmouseout="changeImage('WO','WO1.jpg')"></img></td>
+
+  </tr>
+  <tr>
+	<td class="tg-q5im">-</td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="n.play()"><img src = "N1.jpg" id = "N" width="100px" onmouseover="changeImage('N' ,'n.gif')" onmouseout="changeImage('N','N1.jpg')"></img></td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im">-</td>
+    <td class="tg-q5im"></td>
+    <td class="tg-q5im" onmousedown="wa.play()"><img src = "WA1.jpg" id = "WA" width="100px" onmouseover="changeImage('WA' ,'wa.gif')" onmouseout="changeImage('WA','WA1.jpg')"></img></td>
+
+  </tr>
+</table>
+</div>
+<br><br><br><br>
+
+
+<button id = "one" class="btn" width="48px" height="48px">Test Yourself</button><br>
+<div class="div1" id="two" align="left" style="display: none;">
+<b>QUIZ 1:<br>-Hiragana to Romanji</b><br>
+<b>-Please fill in the correct letter(A,B,C or D) into the space provided.<br>-Hit save at the end of each question.<br><br>Question 1:<br> Choose the corresponding Romanji for: </b><br>
+<img src = "se.gif" height="90" width="90"></img><br>
+<p>A) A<br>B) NI<br>C) SE<br>D) SU</p>
+<input id = "q1" type="text" name="fname"><br>
+<button onClick="readText('q1')">Save</button><br><b>---------------------------------------------------------------------------------------------</b>
+
+<b>Question 2:<br> Choose the corresponding Romanji for: </b><br>
+<img src = "ri.gif" height="90" width="90"></img><br>
+<p>A) TE<br>B) RI<br>C) KU<br>D) HO</p>
+<input id="q2" type="text" name="fname"><br>
+<button onClick="readText('q2')">Save</button><br><b>---------------------------------------------------------------------------------------------</b>
+
+<b>Question 3:<br> Choose the corresponding Romanji for: </b><br>
+<img src = "te.gif" height="90" width="90"></img><br>
+<p>A) TE<br>B) RI<br>C) KU<br>D) HO</p>
+<input id="q3" type="text" name="fname"><br>
+<button onClick="readText('q3')">Save</button><br><b>---------------------------------------------------------------------------------------------</b>
+
+<b>Question 4:<br> Choose the corresponding Romanji for: </b><br>
+<img src = "te.gif" height="90" width="90"></img><br>
+<p>A) TE<br>B) RI<br>C) KU<br>D) HO</p>
+<input id="q4" type="text" name="fname"><br>
+<button onClick="readText('q4')">Save</button><br><b>---------------------------------------------------------------------------------------------</b>
+
+<b>Question 5:<br> Choose the corresponding Romanji for: </b><br>
+<img src = "o.gif" height="90" width="90"></img><br>
+<p>A) O<br>B) TA<br>C) KA<br>D) N</p>
+<input id="q5" type="text" name="fname"><br>
+<button onClick="readText('q5')">Save</button><br><b>---------------------------------------------------------------------------------------------</b>
+
+<b>Question 6:<br> Choose the corresponding Romanji for: </b><br>
+<img src = "ku.gif" height="90" width="90"></img><br>
+<p>A) TE<br>B) RI<br>C) KU<br>D) HO</p>
+<input id="q6" type="text" name="fname"><br>
+<button onClick="readText('q6')">Save</button><br><b>---------------------------------------------------------------------------------------------</b>
+
+<b>Question 7:<br> Choose the corresponding Romanji for: </b><br>
+<img src = "wa.gif" height="90" width="90"></img><br>
+<p>A) NE<br>B) SU<br>C) ME<br>D) WA</p>
+<input id="q7" type="text" name="fname"><br>
+<button onClick="readText('q7')">Save</button><br><b>---------------------------------------------------------------------------------------------</b>
+
+<b>Question 8:<br> Choose the corresponding Romanji for: </b><br>
+<img src = "ho.gif" height="90" width="90"></img><br>
+<p>A) TE<br>B) RI<br>C) KU<br>D) HO</p>
+<input id="q8" type="text" name="fname"><br>
+<button onClick="readText('q8')">Save</button><br><b>---------------------------------------------------------------------------------------------</b>
+
+<b>Question 9:<br> Choose the corresponding Romanji for: </b><br>
+<img src = "su.gif" height="90" width="90"></img><br>
+<p>A) SE<br>B) U<br>C) SU<br>D) CHI</p>
+<input id="q9" type="text" name="fname"><br>
+<button onClick="readText('q9')">Save</button><br>
+<b>---------------------------------------------------------------------------------------------</b>
+
+<b>Question 10:<br> Choose the corresponding Romanji for: </b><br>
+<img src = "se.gif" height="90" width="90"></img><br>
+<p>A) SE<br>B) U<br>C) SU<br>D) CHI</p>
+<input id="q10" type="text" name="fname"><br>
+<button onClick="readText('q10')">Save</button><br>
+<b>---------------------------------------------------------------------------------------------</b>
+
+
+<button class="btnn" id="results">Get results for Quiz 1!</button><b id="result"></b><br><b>---------------------------------------------------------------------------------------------</b><br>
+
+
+<b>QUIZ 2:<br>-Romanji to Hiranga</b><br>
+<b>-Please fill in the correct letter(A,B,C or D) into the space provided.<br>-Hit save at the end of each question.</b><br><br>
+
+<b>Question 1:<br> Choose the corresponding kana element for: NO</b><br>
+<p>A)<p><img src = "su.gif" height="90" width="90"></img>
+<p>B)<p><img src = "ru.gif" height="90" width="90"></img>
+<p>C)<p><img src = "no.gif" height="90" width="90"></img>
+<p>D)<p><img src = "I.gif" height="90" width="90"></img><br>
+<input id="q11" type="text" name="fname"><br>
+<button onClick="readText('q11')">Save</button><br><b>---------------------------------------------------------------------------------------------</b><br>
+
+<b>Question 2:<br> Choose the corresponding kana element for: I</b><br>
+<p>A)<p><img src = "ru.gif" height="90" width="90"></img>
+<p>B)<p><img src = "su.gif" height="90" width="90"></img>
+<p>C)<p><img src = "no.gif" height="90" width="90"></img>
+<p>D)<p><img src = "I.gif" height="90" width="90"></img><br>
+<input id="q12" type="text" name="fname"><br>
+<button onClick="readText('q12')">Save</button><br><b>---------------------------------------------------------------------------------------------</b><br>
+
+<b>Question 3:<br> Choose the corresponding kana element for: O</b><br>
+<p>A)<p><img src = "tu.gif" height="90" width="90"></img>
+<p>B)<p><img src = "hu.gif" height="90" width="90"></img>
+<p>C)<p><img src = "ki.gif" height="90" width="90"></img>
+<p>D)<p><img src = "o.gif" height="90" width="90"></img><br>
+<input id="q13" type="text" name="fname"><br>
+<button onClick="readText('q13')">Save</button><br><b>---------------------------------------------------------------------------------------------</b><br>
+
+<b>Question 4:<br> Choose the corresponding kana element for: NE</b><br>
+<p>A)<p><img src = "nu.gif" height="90" width="90"></img>
+<p>B)<p><img src = "su.gif" height="90" width="90"></img>
+<p>C)<p><img src = "me.gif" height="90" width="90"></img>
+<p>D)<p><img src = "ne.gif" height="90" width="90"></img><br>
+<input id="q14" type="text" name="fname"><br>
+<button onClick="readText('q14')">Save</button><br><b>---------------------------------------------------------------------------------------------</b>
+
+<b>Question 5:<br> Choose the corresponding kana element for: MI</b><br>
+<p>A)<p><img src = "na.gif" height="90" width="90"></img>
+<p>B)<p><img src = "mi.gif" height="90" width="90"></img>
+<p>C)<p><img src = "ko.gif" height="90" width="90"></img>
+<p>D)<p><img src = "sa.gif" height="90" width="90"></img><br>
+<input id="q15" type="text" name="fname"><br>
+<button onClick="readText('q15')">Save</button><br><b>---------------------------------------------------------------------------------------------</b><br>
+
+<b>Question 6:<br> Choose the corresponding kana element for: FU</b><br>
+<p>A)<p><img src = "hu.gif" height="90" width="90"></img>
+<p>B)<p><img src = "tu.gif" height="90" width="90"></img>
+<p>C)<p><img src = "ki.gif" height="90" width="90"></img>
+<p>D)<p><img src = "o.gif" height="90" width="90"></img><br>
+<input id="q16" type="text" name="fname"><br>
+<button onClick="readText('q16')">Save</button><br><b>---------------------------------------------------------------------------------------------</b><br>
+
+<b>Question 7:<br> Choose the corresponding kana element for: HA</b><br>
+<p>A)<p><img src = "ha.gif" height="90" width="90"></img>
+<p>B)<p><img src = "mi.gif" height="90" width="90"></img>
+<p>C)<p><img src = "ko.gif" height="90" width="90"></img>
+<p>D)<p><img src = "sa.gif" height="90" width="90"></img><br>
+<input id="q17" type="text" name="fname"><br>
+<button onClick="readText('q17')">Save</button><br><b>---------------------------------------------------------------------------------------------</b><br>
+
+<b>Question 8:<br> Choose the corresponding kana element for: KO</b><br>
+<p>A)<p><img src = "na.gif" height="90" width="90"></img>
+<p>B)<p><img src = "mi.gif" height="90" width="90"></img>
+<p>C)<p><img src = "ko.gif" height="90" width="90"></img>
+<p>D)<p><img src = "sa.gif" height="90" width="90"></img><br>
+<input id="q18" type="text" name="fname"><br>
+<button onClick="readText('q18')">Save</button><br><b>---------------------------------------------------------------------------------------------</b><br>
+
+
+<b>Question 9:<br> Choose the corresponding kana element for: YU</b><br>
+<p>A)<p><img src = "tu.gif" height="90" width="90"></img>
+<p>B)<p><img src = "yu.gif" height="90" width="90"></img>
+<p>C)<p><img src = "ki.gif" height="90" width="90"></img>
+<p>D)<p><img src = "o.gif" height="90" width="90"></img><br>
+<input id="q19" type="text" name="fname"><br>
+<button onClick="readText('q19')">Save</button><br><b>---------------------------------------------------------------------------------------------</b><br>
+
+<b>Question 10:<br> Choose the corresponding kana element for: E</b><br>
+<p>A)<p><img src = "ha.gif" height="90" width="90"></img>
+<p>B)<p><img src = "e.gif" height="90" width="90"></img>
+<p>C)<p><img src = "ne.gif" height="90" width="90"></img>
+<p>D)<p><img src = "ri.gif" height="90" width="90"></img><br>
+<input  id="q20" type="text" name="fname"><br>
+<button onClick="readText('q20')">Save</button><br><b>---------------------------------------------------------------------------------------------</b>
+<button class="btnn" id="results1">Get results for Quiz 2!</button><b id="result1"></b><br>
+<button class="btnn" onClick="reset();">Reset Quiz</button><br><b>---------------------------------------------------------------------------------------------</b><br>
+<p>Create an account or sign in to save the quiz </p><button class="btnn" id="createAccount">Create Account/Sign in</button><br><b>---------------------------------------------------------------------------------------------</b><br>
+<div id = "createaccount1" class = "div2" align="left" style="display: none;">
+Create Account:<br>
+<input type="text" id="createUsername" name="createUsername" placeholder="Username">
+<input type="text" id="createPassword" name="CreatePassword" placeholder="Password"><br>
+<input type="button" id="createAccount2" value ="Create and save!"><br /> <span class ="errors" id = "createerror"></span><br />
+
+<br>
+OR<br>
+<br>
+
+Sign in to save:<br>
+<input type="text" id="inUsername" placeholder="Username"><br />
+<input type="password" id="inPassword" placeholder="Password"><br /> 
+<input type="button" id="signin" value ="Save!"><br /> <span class ="errors" id = "signinerror"></span><br />
+</div>
+
+
+<button class="btnn" id="showresults">Show previous results</button><br>
+<br>
+
+
+<div id = "showresults1" class = "div3" align="left" style="display: none;"><span class ="errors" id = "showerror"></span>
+<table class="tt" style="undefined;table-layout: fixed; width: 331px">
+<colgroup>
+<col style="width: 76px">
+<col style="width: 51px">
+<col style="width: 51px">
+<col style="width: 51px">
+<col style="width: 51px">
+<col style="width: 51px">
+</colgroup>
+  <tr>
+    <th class="tg-6idm">QUIZ 1:</th>
+    <th class="tg-031e"></th>
+    <th class="tg-yw4l"></th>
+    <th class="tg-yw4l"></th>
+    <th class="tg-yw4l"></th>
+    <th class="tg-yw4l"></th>
+  </tr>
+  <tr>
+    <td class="tg-6idm"> QUIZ 2:</td>
+    <td class="tg-031e"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+</table>
+</div>
+</div></center>
+Credits:<br>
+gifs retrieved from: <a href="https://commons.wikimedia.org/wiki/Category:Hiragana_stroke_order">here</a><br>
+images retrieved from: <a href="http://www.evanseasyjapanese.com/hiragana.html">here</a><br>
+audio retrieved from:  <a href="http://www.guidetojapanese.org/learn/complete/hiragana">here</a><br>
+
+
+</body>
+</html>
