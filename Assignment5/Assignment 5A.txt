@@ -1,0 +1,72 @@
+<html>
+<style></style>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="a5,1jss.js?2"></script>
+<meta http-equiv="pragma" content="no-cache" />
+<body>
+
+
+
+
+<form action="javascipt:void(0)">
+  <fieldset>
+    <legend>Create:</legend>
+    Name:<br>
+    <input id="cname" type="text" name="name">
+    <br>
+	URL:<br>
+    <input id="curl" type="text" name="URL">
+    <br>
+	Description:<br>
+    <input id="cdesc" type="text" name="desc">
+    <br><br>
+    <input id="csubmit" name="csub" type="submit" value="Submit">
+  </fieldset>
+</form>
+
+<p id="myElem" style="display:none"><br></p>
+<form action="javascipt:void(0)">
+  <fieldset>
+    <legend>Retrieve:</legend>
+	Retrieve by:<br>
+	<select name="selector" id="selector">
+     <option id="rid" value="ID">ID</option>
+     <option id="rname" value="Name">Name</option>
+     <option id="rdesc" value="Description">Description</option>
+    <input id="retr" type="text" name="name">
+    </select><br>
+    <input id="rsubmit" type="submit" value="Submit">
+  </fieldset>
+</form>
+<p id="myElemr" style="display:none"><br></p>
+
+
+<form action="javascipt:void(0)">
+  <fieldset>
+    <legend>Delete:</legend>
+	ID:<br>
+    <input id="did" type="text" name="id">
+    <br><br>
+    <input id="dsub" type="submit" value="Submit">
+  </fieldset>
+</form>
+<p id="myElemd" style="display:none"><br></p>
+
+<form action="javascipt:void(0)">
+  <fieldset>
+    <legend>Update:</legend>
+	Update by:<br>
+    <select name="selector1" id="selector1">
+     <option id="uname" value="Name">Name</option>
+     <option id="uurl" value="URL">URL</option>
+     <option id="udesc" value="Description">Description</option>
+    </select>
+    <br> From:<input id="uval" type="text" name="name">to: <input id="newval" type="text" name="name"><br>
+    <input id="usubmit" type="submit" value="Submit">
+  </fieldset>
+</form>
+<p id="myElemu" style="display:none"><br></p>
+ <a href="https://www.leaseweb.com/labs/2015/10/creating-a-simple-rest-api-in-php/">Webservice credit(edited)<a>
+
+</body>
+</html>

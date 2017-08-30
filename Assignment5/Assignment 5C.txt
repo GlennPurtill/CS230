@@ -1,0 +1,134 @@
+$(document).ready(function() {
+	$('#csubmit').click(function() {
+		//alert("clicked");
+		
+		var ID = 0;
+		var cname = $('#cname').val();
+		var curl = $('#curl').val();
+		var cdesc = $('#cdesc').val();
+		var d = new Date();
+        var nDate = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
+		var readingListItem = {"ID":ID, "theDate":nDate, "name":cname, "URL":curl, "theDesc":cdesc};
+		var readingListItem1 = JSON.stringify(readingListItem);
+		$.ajax({
+			method: 'POST',
+			url: "webservice1.php/readinglist",
+			data: readingListItem1,
+			contentType: "json",
+			success: function(data){
+				$("#myElem").show();
+			   $("#myElem").html("JSON sent to server: " + readingListItem1 +". Inerstion ID: " +data);
+			     setTimeout(function() { $("#myElem").hide(); }, 15000);
+			}
+			});
+		
+		});
+		
+		$('#rsubmit').click(function(){
+			var getSel = $('select[name=selector]').val();
+			//alert(getSel);
+			var rjson = "";
+			var retr = $('#retr').val();
+			if(getSel == "ID"){
+				rjson = {"NID":getSel};
+				rjson = JSON.stringify(rjson);
+					$.ajax({
+					    method: 'GET',
+						url: "webservice1.php/readinglist/"+retr,
+						data: {p: rjson},
+					//	contentType: "json",
+						success: function(data){
+							$("#myElemr").show();
+						    $("#myElemr").html("Response from server: <br>"+data);
+							  setTimeout(function() { $("#myElemr").hide(); }, 15000);
+						}
+				 });
+				
+			}
+			if(getSel == "Name"){
+				rjson = {"NID":getSel, "val": retr};
+				rjson = JSON.stringify(rjson);
+				//alert(rjson);
+					$.ajax({
+					    method: 'GET',
+						url: "webservice1.php/readinglist",
+						data: {p: rjson},
+					//	contentType: "json",
+						success: function(data){
+							$("#myElemr").show();
+						    $("#myElemr").html("JSON sent to server: " +rjson+". Json from server: <br>"+data);
+							  setTimeout(function() { $("#myElemr").hide(); }, 15000);
+						}
+				 });
+				
+			}
+			if(getSel == "Description"){
+				rjson = {"NID":getSel, "val": retr};
+				rjson = JSON.stringify(rjson);
+				//alert(rjson);
+					$.ajax({
+					    method: 'GET',
+						url: "webservice1.php/readinglist",
+						data: {p: rjson},
+					//	contentType: "json",
+						success: function(data){
+							$("#myElemr").show();
+						    $("#myElemr").html("JSON sent to server: " +rjson+". Json from server: <br>"+data);
+							  setTimeout(function() { $("#myElemr").hide(); }, 15000);
+						}
+				 });
+				
+			}
+		});
+		
+		 $('#usubmit').click(function(){
+		  var getSel1 = $('select[name=selector1]').val();
+		 // alert("hello" + getSel1);
+		  var uval = $('#uval').val();
+		  var newval = $('#newval').val();
+		  var item =""; 
+		  if(getSel1=="Name"){
+				item = {"oldVal": uval, "newval": newval, "NUD":"Name"};
+				item = JSON.stringify(item);
+		  }
+		  else if(getSel1=="URL"){
+				item = {"oldVal": uval, "newval": newval, "NUD":"URL"};
+				item = JSON.stringify(item);
+		  }
+		  else{
+				item = {"oldVal": uval, "newval": newval, "NUD":"Description"};
+				item = JSON.stringify(item);
+		  }
+			//  alert(item);
+			$.ajax({
+				method: 'PUT',
+				url: "webservice1.php/readinglist",
+				data: item,
+				contentType: "json",
+				success: function(data){
+					$("#myElemu").show();
+				    $("#myElemu").html("JSON sent to server: " + item +". Updated rows: " + data);
+					  setTimeout(function() { $("#myElemu").hide(); }, 15000);
+				}
+			});
+		 });
+		 
+		 $('#dsub').click(function(){
+			 var did = $('#did').val();
+			 var dval = "DELETE";
+			 var djson = {"did":did, "dval":dval};
+			 djson = JSON.stringify(djson);
+			 //alert(djson);
+			$.ajax({
+				method: 'POST',
+				url: "webservice1.php/readinglist",
+				data: djson,
+				contentType: "json",
+				success: function(data){
+					$("#myElemd").show();
+				    $("#myElemd").html("JSON sent to server: " + djson +". Number of deleted rows: " + data);
+					 setTimeout(function() { $("#myElemd").hide(); }, 15000);
+				}
+			});
+		 });
+});
