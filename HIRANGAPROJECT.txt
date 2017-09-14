@@ -1,4 +1,8 @@
-Description: Tutor app, functioning as a single page application that runs in a web browser. The app displays a Hiragana symbol table with is corresponding English. On clicking the symbol on the table, the app will play the pronunciation of that Hiragana symbol. On hovering the mouse over a symbol, a gif will display which shows how to write the corresponding symbol. The app provides a test area in which you can test the skills you have learned and allows users to save and review their progress using AJAX calls to an accompanying database via a web service.
+Description: Tutor app, functioning as a single page application that runs in a web browser. The app displays a Hiragana symbol
+table with is corresponding English. On clicking the symbol on the table, the app will play the pronunciation of that Hiragana
+symbol. On hovering the mouse over a symbol, a gif will display which shows how to write the corresponding symbol. The app
+provides a test area in which you can test the skills you have learned and allows users to save and review their progress using
+AJAX calls to an accompanying database via a web service.
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
